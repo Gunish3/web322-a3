@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Project</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body class="min-h-screen bg-base-200">
+  <%- include('partials/navbar') %>
+
+  <main class="container mx-auto px-4 py-12 max-w-3xl">
+    <h1 class="text-4xl font-bold mb-6">Add Project</h1>
+
+    <form action="/solutions/addProject" method="POST" class="space-y-4">
+      <!-- title -->
+      <div>
+        <label class="block font-semibold mb-1" for="title">Title</label>
+        <input
+          id="title"
+          name="title"
+          type="text"
+          required
+          class="input input-bordered w-full"
+        />
+      </div>
+
+      <!-- feature_img_url -->
+      <div>
+        <label class="block font-semibold mb-1" for="feature_img_url">Feature Image URL</label>
+        <input
+          id="feature_img_url"
+          name="feature_img_url"
+          type="url"
+          required
+          class="input input-bordered w-full"
+        />
+      </div>
+
+      <!-- sector_id -->
+      <div>
+        <label class="block font-semibold mb-1" for="sector_id">Sector</label>
+        <select
+          id="sector_id"
+          name="sector_id"
+          required
+          class="select select-bordered w-full"
+        >
+          <option value="" disabled selected>Select a sector</option>
+          <% sectors.forEach(function(sector) { %>
+            <option value="<%= sector.id %>"><%= sector.sector_name %></option>
+          <% }); %>
+        </select>
+      </div>
+
+      <!-- intro_short -->
+      <div>
+        <label class="block font-semibold mb-1" for="intro_short">Intro</label>
+        <textarea
+          id="intro_short"
+          name="intro_short"
+          rows="3"
+          required
+          class="textarea textarea-bordered w-full"
+        ></textarea>
+      </div>
+
+      <!-- summary_short -->
+      <div>
+        <label class="block font-semibold mb-1" for="summary_short">Summary</label>
+        <textarea
+          id="summary_short"
+          name="summary_short"
+          rows="3"
+          required
+          class="textarea textarea-bordered w-full"
+        ></textarea>
+      </div>
+
+      <!-- impact -->
+      <div>
+        <label class="block font-semibold mb-1" for="impact">Impact</label>
+        <textarea
+          id="impact"
+          name="impact"
+          rows="3"
+          required
+          class="textarea textarea-bordered w-full"
+        ></textarea>
+      </div>
+
+      <!-- original_source_url -->
+      <div>
+        <label class="block font-semibold mb-1" for="original_source_url">Original Source URL</label>
+        <input
+          id="original_source_url"
+          name="original_source_url"
+          type="url"
+          required
+          class="input input-bordered w-full"
+        />
+      </div>
+
+      <!-- submit -->
+      <div class="pt-4">
+        <button type="submit" class="btn btn-primary">Add Project</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

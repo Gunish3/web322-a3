@@ -1,0 +1,53 @@
+[
+    {
+      "id": 1,
+      "title": "Solar Rooftops Program",
+      "summary_short": "Encouraging households to install solar panels.",
+      "sector_id": 1,
+      "feature_img_url": "https://picsum.photos/800/400?solar",
+      "intro_short": "Homes around the world are turning to rooftop solar to offset electricity costs.",
+      "impact": "Reduces fossil fuel dependency and promotes renewable energy.",
+      "original_source_url": "https://example.com/solar-rooftops"
+    },
+    {
+      "id": 2,
+      "title": "Public Electric Bus Fleet",
+      "summary_short": "Replacing diesel buses with electric ones.",
+      "sector_id": 2,
+      "feature_img_url": "https://picsum.photos/800/400?bus",
+      "intro_short": "Cities are rapidly electrifying public transport systems.",
+      "impact": "Cuts emissions and improves urban air quality.",
+      "original_source_url": "https://example.com/electric-buses"
+    },
+    {
+      "id": 3,
+      "title": "Energy Efficient Building Retrofits",
+      "summary_short": "Refitting buildings to use less power.",
+      "sector_id": 3,
+      "feature_img_url": "https://picsum.photos/800/400?building",
+      "intro_short": "Old buildings can save energy with smart retrofits like LED lighting and better insulation.",
+      "impact": "Reduces energy bills and greenhouse gases.",
+      "original_source_url": "https://example.com/building-retrofits"
+    },
+    {
+      "id": 4,
+      "title": "Low-Carbon Cement Production",
+      "summary_short": "Making cement with lower CO₂ emissions.",
+      "sector_id": 4,
+      "feature_img_url": "https://picsum.photos/800/400?cement",
+      "intro_short": "Cement is a major source of industrial emissions.",
+      "impact": "Helps decarbonize construction and infrastructure projects.",
+      "original_source_url": "https://example.com/low-carbon-cement"
+    },
+    {
+      "id": 5,
+      "title": "Vertical Farming for Cities",
+      "summary_short": "Growing food indoors using less land and water.",
+      "sector_id": 5,
+      "feature_img_url": "https://picsum.photos/800/400?farm",
+      "intro_short": "Vertical farming is a sustainable way to grow fresh food in urban areas.",
+      "impact": "Uses 90% less water and eliminates transport emissions.",
+      "original_source_url": "https://example.com/vertical-farming"
+    }
+  ]
+  

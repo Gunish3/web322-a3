@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Server Error</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body class="min-h-screen bg-base-200">
+  <%- include('partials/navbar') %>
+
+  <main class="container mx-auto px-4 py-12">
+    <h1 class="text-5xl font-bold mb-4">500</h1>
+    <p class="mb-4">
+      I'm sorry, but we have encountered the following error:
+    </p>
+    <p class="mb-8"><%= message %></p>
+
+    <a href="/solutions/projects" class="btn btn-primary">Back to Projects</a>
+  </main>
+</body>
+</html>

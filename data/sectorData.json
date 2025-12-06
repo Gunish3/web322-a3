@@ -1,0 +1,8 @@
+[
+    { "id": 1, "sector_name": "Electricity" },
+    { "id": 2, "sector_name": "Transportation" },
+    { "id": 3, "sector_name": "Buildings" },
+    { "id": 4, "sector_name": "Industry" },
+    { "id": 5, "sector_name": "Food & Agriculture" }
+  ]
+  

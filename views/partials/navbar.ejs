@@ -1,0 +1,50 @@
+<div class="navbar bg-base-100 shadow">
+  <div class="flex-1">
+    <a href="/" class="btn btn-ghost text-xl">Climate Solutions</a>
+  </div>
+
+  <div class="flex-none gap-4 flex items-center">
+
+    <!-- ABOUT LINK -->
+    <a href="/about" class="btn btn-ghost">About</a>
+
+    <!-- SECTOR DROPDOWN -->
+    <div class="dropdown dropdown-end">
+      <div tabindex="0" role="button" class="btn">Sector</div>
+      <ul
+        tabindex="0"
+        class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
+      >
+        <li><a href="/solutions/projects?sector=Transportation">Transportation</a></li>
+        <li><a href="/solutions/projects?sector=Industry">Industry</a></li>
+        <li><a href="/solutions/projects?sector=Electricity">Electricity</a></li>
+        <li><a href="/solutions/projects?sector=Buildings">Buildings</a></li>
+        <li><a href="/solutions/projects?sector=Food">Food/Agriculture</a></li>
+      </ul>
+    </div>
+
+    <!-- AUTH SECTION -->
+    <% if (!session || !session.user) { %>
+
+      <!-- SHOW LOGIN WHEN LOGGED OUT -->
+      <a href="/login" class="btn btn-outline">Log In</a>
+
+    <% } else { %>
+
+      <!-- SHOW USER + LOGOUT WHEN LOGGED IN -->
+      <div class="dropdown dropdown-end">
+        <div tabindex="0" role="button" class="btn btn-secondary">
+          <%= session.user.userName %>
+        </div>
+        <ul
+          tabindex="0"
+          class="dropdown-content menu bg-base-100 rounded-box w-40 p-2 shadow"
+        >
+          <li><a href="/logout" class="font-semibold text-red-500">Log Out</a></li>
+        </ul>
+      </div>
+
+    <% } %>
+
+  </div>
+</div>

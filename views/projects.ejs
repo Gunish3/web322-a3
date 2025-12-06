@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="/css/main.css" rel="stylesheet" />
+</head>
+<body>
+  <%- include('partials/navbar') %>
+
+  <main class="py-10 px-6 bg-gradient-to-b from-blue-100 to-white">
+
+    <!-- TOP CARD -->
+    <div class="max-w-4xl mx-auto card bg-white shadow-xl p-6 space-y-4">
+
+      <div class="flex items-center justify-between">
+        <h1 class="text-3xl font-bold">Projects</h1>
+
+        <!-- SHOW ONLY WHEN LOGGED IN -->
+        <% if (session && session.user) { %>
+          <a href="/solutions/addProject" class="btn btn-primary">
+            Add Project
+          </a>
+        <% } %>
+      </div>
+
+      <a href="/" class="btn btn-outline mt-3">Home</a>
+    </div>
+
+    <!-- PROJECT TABLE -->
+    <div class="glass-card p-4 md:p-6 mt-6">
+      <div class="overflow-x-auto">
+
+        <table class="table table-lg table-pin-rows">
+          <thead class="sticky top-[64px] bg-base-100 z-10">
+            <tr>
+              <th>Title</th>
+              <th>Sector</th>
+              <th>Summary</th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% projects.forEach(p => { %>
+              <tr class="hover">
+
+                <!-- TITLE -->
+                <td class="font-medium">
+                  <%= p.title %>
+                </td>
+
+                <!-- SECTOR -->
+                <td>
+                  <a 
+                    class="badge-sector" 
+                    href="/solutions/projects?sector=<%= encodeURIComponent(p.Sector.sector_name) %>">
+                    <%= p.Sector.sector_name %>
+                  </a>
+                </td>
+
+                <!-- SUMMARY -->
+                <td class="opacity-80">
+                  <%= p.summary_short %>
+                </td>
+
+                <!-- DETAILS BUTTON -->
+                <td class="text-right">
+                  <a 
+                    class="btn btn-primary btn-sm"
+                    href="/solutions/projects/<%= p.id %>"
+                  >
+                    Details
+                  </a>
+                </td>
+
+              </tr>
+            <% }) %>
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
