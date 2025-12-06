@@ -10,17 +10,23 @@
 <body>
   <%- include('partials/navbar') %>
 
-  <main class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-blue-100 to-white text-center px-6">
+  <!-- HERO SECTION -->
+  <main class="min-h-screen flex flex-col items-center justify-center text-center 
+              bg-gradient-to-b from-blue-100 to-white px-6">
 
-    <h1 class="text-4xl font-bold mb-4">
+    <!-- Title -->
+    <h1 class="text-4xl sm:text-5xl font-bold mb-3">
       Explore Climate Projects
     </h1>
 
-    <p class="text-lg opacity-80 max-w-xl mb-6">
+    <!-- Subtitle -->
+    <p class="text-lg sm:text-xl opacity-80 max-w-2xl mb-6">
       Browse real solutions and their impact.
     </p>
 
-    <a href="/solutions/projects" class="btn btn-primary px-6 py-2 text-lg">
+    <!-- Button -->
+    <a href="/solutions/projects" 
+       class="btn btn-primary px-6 py-3 text-lg shadow-md hover:shadow-lg transition">
       View Projects
     </a>
 
