@@ -16,7 +16,7 @@ const clientSessions = require("client-sessions");
 *
 *  Name: Gunish Sharma      Student ID: 121393235      Date: December 5, 2025
 *
-*  Published URL: (add your Vercel URL here once deployed)
+*  Published URL: https://web322-a3-gilt.vercel.app/
 *
 *********************************************************************************/
 
